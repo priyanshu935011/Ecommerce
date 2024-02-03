@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
+require("dotenv").config();
 const connected = () => {
-  mongoose.connect("mongodb://127.0.0.1:27017/ecommerce");
+  mongoose.connect(process.env.React_App_DATABASE);
 };
 module.exports = connected;
